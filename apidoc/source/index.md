@@ -137,11 +137,22 @@ GET /orders/&lt;order_id&gt;
 
 Where &lt;order_id&gt; is Grofers order id, eg : testorder-1
 
+### List of possible order statuses: 
+
+Status | Description
+--------- | -----------
+RECEIVED | Order has been received by Grofers
+ASSIGNED | Order has been assigned to a field executive
+ENROUTE | Field executive has picked the package from the pickup location
+DELIVERED | Field executive has delivered to the delivery location
+CANCELLED | Order has been Cancelled
+UNSCHEDULED | Order has been received but not scheduled for delivery
+RETURNED | Orders has been returned to merchant
+ON_HOLD | Order is on hold
+
 ## Responses
 
- * Order status : RECEIVED
-
-> For order status as Received
+<h3 class="content">Order status : RECEIVED</h3>
 
 ```json
 {
@@ -184,9 +195,7 @@ Where &lt;order_id&gt; is Grofers order id, eg : testorder-1
 }
 ```
 
-* Order status : ASSIGNED
-
-> For order status as Assigned
+<h3 class="content">Order status : ASSIGNED</h3>
 
 ```json
 {
@@ -234,9 +243,7 @@ Where &lt;order_id&gt; is Grofers order id, eg : testorder-1
 }
 ```
 
-* Order status : ENROUTE
-
-> For order status as Enroute
+<h3 class="content">Order status : ENROUTE</h3>
 
 ```json
 {
@@ -289,9 +296,7 @@ Where &lt;order_id&gt; is Grofers order id, eg : testorder-1
 }
 ```
 
-* STATUS: DELIVERED
-
-> For order status as Delivered
+<h3 class="content">STATUS: DELIVERED</h3>
 
 ```json
 {
@@ -349,9 +354,7 @@ Where &lt;order_id&gt; is Grofers order id, eg : testorder-1
 }
 ```
 
-* STATUS : CANCELLED
-
-> For order status as Cancelled
+<h3 class="content">STATUS : CANCELLED</h3>
 
 ```json
 {
@@ -502,7 +505,22 @@ You can view your delivery order by logging on [grofer.it] ( testing ) with cred
 </aside>
 
 <aside class="notice">
-Need API access - Drop us an email at sales@grofers.com
+Need API access - Drop us an email at **sales@grofers.com**
 </aside>
 
+<style type="text/css">
+h3{
+clear: both;
+border-bottom: 1px solid #ddd;
+line-height: 2em;
+}
 
+ pre{
+position: relative;
+top: -10px;
+}
+
+.tocify-wrapper .tocify-focus{
+background-color: #e96125;
+}
+</style>
